@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Project_2/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/src/main/java/com/example/Project_2/Project2Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/src/test/java/com/example/Project_2/Project2ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Added packages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,16 +15,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "alberto93927"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Joaleramirez/Project_2_CST438.git",
+    "accountId": "59ab613a-a8a9-4d64-9f1d-57dbc17b8c6d"
+  }
+}]]></component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2tW2S4Sr6Be4y56VB3vVq9nvSkR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,7 +53,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "alberto-Welcome",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -52,11 +64,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Project_2/backend" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9823dce3aa75-f9f52b72c171-intellij.indexing.shared.core-IU-251.22821.72" />
+        <option value="bundled-js-predefined-d6986cc7102b-7af238ef196b-JavaScript-IU-251.22821.72" />
       </set>
     </attachedChunks>
   </component>
@@ -69,10 +86,74 @@
       <option name="presentableId" value="Default" />
       <updated>1740453506639</updated>
       <workItem from="1740453507828" duration="599000" />
+      <workItem from="1740565078011" duration="6409000" />
     </task>
+    <task id="LOCAL-00001" summary="Currently, in the process of restructuring some directories in the project to integrate a frontend.">
+      <option name="closed" value="true" />
+      <created>1740567344781</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740567344781</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created React Application for the frontend.">
+      <option name="closed" value="true" />
+      <created>1740568323057</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740568323057</updated>
+    </task>
+    <task id="LOCAL-00003" summary="I have created the basic WelcomePage.">
+      <option name="closed" value="true" />
+      <created>1740569856809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740569856809</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added packages">
+      <option name="closed" value="true" />
+      <created>1740569894215</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740569894215</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/alberto-Oauth" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Currently, in the process of restructuring some directories in the project to integrate a frontend." />
+    <MESSAGE value="Created React Application for the frontend." />
+    <MESSAGE value="I have created the basic WelcomePage." />
+    <MESSAGE value="Added packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added packages" />
   </component>
 </project>
