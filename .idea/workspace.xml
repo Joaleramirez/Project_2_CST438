@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Created React Application for the frontend.">
+    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Added packages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740453506639</updated>
       <workItem from="1740453507828" duration="599000" />
-      <workItem from="1740565078011" duration="4449000" />
+      <workItem from="1740565078011" duration="6409000" />
     </task>
     <task id="LOCAL-00001" summary="Currently, in the process of restructuring some directories in the project to integrate a frontend.">
       <option name="closed" value="true" />
@@ -103,7 +104,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740568323057</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="I have created the basic WelcomePage.">
+      <option name="closed" value="true" />
+      <created>1740569856809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740569856809</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added packages">
+      <option name="closed" value="true" />
+      <created>1740569894215</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740569894215</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +152,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Currently, in the process of restructuring some directories in the project to integrate a frontend." />
     <MESSAGE value="Created React Application for the frontend." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created React Application for the frontend." />
+    <MESSAGE value="I have created the basic WelcomePage." />
+    <MESSAGE value="Added packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added packages" />
   </component>
 </project>
