@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future.">
-      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/Dashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/styles/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/settings.gradle" beforeDir="false" />
-    </list>
+    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740453506639</updated>
       <workItem from="1740453507828" duration="599000" />
-      <workItem from="1740565078011" duration="22409000" />
+      <workItem from="1740565078011" duration="23255000" />
     </task>
     <task id="LOCAL-00001" summary="Currently, in the process of restructuring some directories in the project to integrate a frontend.">
       <option name="closed" value="true" />
@@ -143,7 +127,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740571745670</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory.">
+      <option name="closed" value="true" />
+      <created>1740651097970</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740651097970</updated>
+    </task>
+    <task id="LOCAL-00007" summary="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory.">
+      <option name="closed" value="true" />
+      <created>1740651112698</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740651112698</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +178,7 @@
     <MESSAGE value="I have created the basic WelcomePage." />
     <MESSAGE value="Added packages" />
     <MESSAGE value="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future." />
+    <MESSAGE value="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory." />
+    <option name="LAST_COMMIT_MESSAGE" value="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory." />
   </component>
 </project>
