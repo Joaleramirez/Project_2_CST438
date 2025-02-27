@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Added packages">
+    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future.">
+      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/Dashboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/styles/Dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project_2/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/settings.gradle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="alberto-Welcome" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +57,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2tW2S4Sr6Be4y56VB3vVq9nvSkR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,7 +69,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "alberto-Welcome",
+    "git-widget-placeholder": "alberto-OAuth",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -86,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740453506639</updated>
       <workItem from="1740453507828" duration="599000" />
-      <workItem from="1740565078011" duration="6409000" />
+      <workItem from="1740565078011" duration="22409000" />
     </task>
     <task id="LOCAL-00001" summary="Currently, in the process of restructuring some directories in the project to integrate a frontend.">
       <option name="closed" value="true" />
@@ -120,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740569894215</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future.">
+      <option name="closed" value="true" />
+      <created>1740571745669</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740571745670</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +177,7 @@
     <MESSAGE value="Created React Application for the frontend." />
     <MESSAGE value="I have created the basic WelcomePage." />
     <MESSAGE value="Added packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added packages" />
+    <MESSAGE value="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future." />
   </component>
 </project>
