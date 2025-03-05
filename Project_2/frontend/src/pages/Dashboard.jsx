@@ -52,7 +52,6 @@ const Dashboard = () => {
                     <img src={user.picture} alt="Profile" className="user-profile-pic" />
                     <p>Email: {user.email}</p>
 
-                    {/* Admin Panel Button (only visible for Admins) */}
                     {user.role === "ADMIN" && (
                         <button onClick={() => navigate("/admin")} className="admin-button">
                             Admin Panel

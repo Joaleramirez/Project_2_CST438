@@ -62,3 +62,21 @@ body, html {
 .dashboard-button:hover {
     background-color: #e0e0e0;
 }
+
+.admin-button {
+    background-color: #ffcc00; /* Bright yellow for emphasis */
+    color: #4A90E2;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.admin-button:hover {
+    background-color: #ffdb4d;
+}
+

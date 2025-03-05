@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Made modifications to the sign-in process to distinguish admins. If a user profile is flagged as an admin, it gives the user access to the AdminPage.jsx. This page is where the user will be able to create, update, delete users, as well as view all users.&#10;&#10;This is currently being done through hardcoding, as the database isn't integrated yet. However, the files and logic are there to make it easy to integrate.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" afterDir="false" />
-    </list>
+    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Currently, hardcoding admins and new users for testing purposes." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +111,7 @@
       <workItem from="1740453507828" duration="599000" />
       <workItem from="1740565078011" duration="36740000" />
       <workItem from="1741044937246" duration="18000" />
-      <workItem from="1741131400421" duration="12598000" />
+      <workItem from="1741131400421" duration="12987000" />
     </task>
     <task id="LOCAL-00001" summary="Currently, in the process of restructuring some directories in the project to integrate a frontend.">
       <option name="closed" value="true" />
@@ -204,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741212902923</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Currently, hardcoding admins and new users for testing purposes.">
+      <option name="closed" value="true" />
+      <created>1741213819283</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741213819283</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +248,7 @@
     <MESSAGE value="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from." />
     <MESSAGE value="Fixed some of the logic behind the Sign Out feature." />
     <MESSAGE value="Made modifications to the sign-in process to distinguish admins. If a user profile is flagged as an admin, it gives the user access to the AdminPage.jsx. This page is where the user will be able to create, update, delete users, as well as view all users.&#10;&#10;This is currently being done through hardcoding, as the database isn't integrated yet. However, the files and logic are there to make it easy to integrate." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made modifications to the sign-in process to distinguish admins. If a user profile is flagged as an admin, it gives the user access to the AdminPage.jsx. This page is where the user will be able to create, update, delete users, as well as view all users.&#10;&#10;This is currently being done through hardcoding, as the database isn't integrated yet. However, the files and logic are there to make it easy to integrate." />
+    <MESSAGE value="Currently, hardcoding admins and new users for testing purposes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Currently, hardcoding admins and new users for testing purposes." />
   </component>
 </project>
