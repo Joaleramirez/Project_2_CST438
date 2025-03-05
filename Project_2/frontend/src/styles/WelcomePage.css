@@ -12,7 +12,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
     background: linear-gradient(to right, #4A90E2, #9013FE);
     color: white;
     text-align: center;
@@ -43,4 +43,22 @@ body, html {
 
 .welcome-button:hover {
     background-color: #e0e0e0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    background: linear-gradient(to right, #4A90E2, #9013FE);
+    height: 5vh;
+}
+
+.login-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    font-size: 1em;
+    text-decoration: none;
 }
