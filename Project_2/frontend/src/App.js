@@ -15,4 +15,16 @@ function App() {
   );
 }
 
+import Dashboard from "./pages/Dashboard";
 export default App;
+function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<WelcomePage/>}/>
+                <Route path="/TierList" element={<TierListPage/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
+            </Routes>
+        </Router>
+    );
+}
