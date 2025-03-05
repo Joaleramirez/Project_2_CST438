@@ -19,10 +19,14 @@ public class UserController {
         // Copy to a mutable HashMap
         Map<String, Object> userAttributes = new HashMap<>(attributes);
 
-        // Add simulated "isNewUser" flag (replace with actual database check later)
-        //userAttributes.put("isNewUser", Math.random() > 0.5); // Randomly assigns new/returning status
+        // Manually set isNewUser for testing
+        String email = (String) userAttributes.get("email");
+
+        // Change this email for testing purposes
+        boolean isNewUser = email.equals("alberto67497@gmail.com"); // Simulated condition
+
+        userAttributes.put("isNewUser", isNewUser);
 
         return userAttributes;
     }
 }
-
