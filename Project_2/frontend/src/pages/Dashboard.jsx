@@ -29,10 +29,10 @@ const Dashboard = () => {
     }, [navigate]);
 
     const handleLogout = () => {
-        setUser(null);
         fetch("http://localhost:8080/logout", { credentials: "include" })
             .then(() => {
-                window.location.href = "http://localhost:3000/";
+                setUser(null); // Clear user data
+                navigate("/"); // Redirect to the Welcome/Sign-In page
             })
             .catch((error) => console.error("Logout failed:", error));
     };

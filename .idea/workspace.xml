@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory.">
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/Explore.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/Onboarding.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/styles/Explore.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/styles/Onboarding.css" afterDir="false" />
+    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/Dashboard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +114,7 @@
       <workItem from="1740453507828" duration="599000" />
       <workItem from="1740565078011" duration="36740000" />
       <workItem from="1741044937246" duration="18000" />
-      <workItem from="1741131400421" duration="5637000" />
+      <workItem from="1741131400421" duration="6986000" />
     </task>
     <task id="LOCAL-00001" summary="Currently, in the process of restructuring some directories in the project to integrate a frontend.">
       <option name="closed" value="true" />
@@ -187,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740651326196</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from.">
+      <option name="closed" value="true" />
+      <created>1741172559604</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741172559604</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +224,7 @@
     <MESSAGE value="Added packages" />
     <MESSAGE value="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future." />
     <MESSAGE value="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory." />
-    <option name="LAST_COMMIT_MESSAGE" value="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory." />
+    <MESSAGE value="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from." />
+    <option name="LAST_COMMIT_MESSAGE" value="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from." />
   </component>
 </project>
