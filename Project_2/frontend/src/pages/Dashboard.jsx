@@ -31,14 +31,17 @@ const Dashboard = () => {
             });
     }, [navigate]);
 
-    const handleLogout = () => {
-        fetch("http://localhost:8080/logout", { credentials: "include" })
-            .then(() => {
-                setUser(null);
-                navigate("/"); // Redirect to Sign-In Page after Logout
-            })
-            .catch((error) => console.error("Logout failed:", error));
+    const handleLogout = async () => {
+        try {
+            await fetch("http://localhost:8080/logout", { credentials: "include" });
+            setUser(null); // Clear user state
+            localStorage.clear(); // Clear any stored data (optional)
+            navigate("/"); // Redirect to Welcome Page
+        } catch (error) {
+            console.error("Logout failed:", error);
+        }
     };
+
 
     return (
         <div className="dashboard-container">
