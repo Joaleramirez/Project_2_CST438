@@ -20,7 +20,7 @@ public class UserController {
         Map<String, Object> userAttributes = new HashMap<>(attributes);
 
         // Add simulated "isNewUser" flag (replace with actual database check later)
-        userAttributes.put("isNewUser", Math.random() > 0.5); // Randomly assigns new/returning status
+        //userAttributes.put("isNewUser", Math.random() > 0.5); // Randomly assigns new/returning status
 
         return userAttributes;
     }
