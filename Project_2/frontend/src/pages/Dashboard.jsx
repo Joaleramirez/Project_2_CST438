@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Dashboard.css"; // Import CSS file
+import { useNavigate } from "react-router-dom"; // Import navigation hook
+import "../styles/Dashboard.css";
 
 const Dashboard = () => {
     const [user, setUser] = useState(null);
     const [error, setError] = useState(null);
+    const navigate = useNavigate(); // Initialize navigate
 
     useEffect(() => {
         fetch("http://localhost:8080/user", { credentials: "include" })
@@ -13,19 +15,24 @@ const Dashboard = () => {
                 }
                 return response.json();
             })
-            .then((data) => setUser(data))
+            .then((data) => {
+                if (data.isNewUser) {
+                    navigate("/onboarding"); // Redirect new users to onboarding
+                } else {
+                    setUser(data);
+                }
+            })
             .catch((error) => {
                 console.error("Error fetching user:", error);
                 setError(error.message);
             });
-    }, []);
+    }, [navigate]);
 
-    // Improved logout function
     const handleLogout = () => {
-        setUser(null); // Clear frontend state
         fetch("http://localhost:8080/logout", { credentials: "include" })
             .then(() => {
-                window.location.href = "http://localhost:3000/";
+                setUser(null); // Clear user data
+                navigate("/"); // Redirect to the Welcome/Sign-In page
             })
             .catch((error) => console.error("Logout failed:", error));
     };
