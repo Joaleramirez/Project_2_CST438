@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from.">
+    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Changed the styling to the admin button.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/Dashboard.jsx" afterDir="false" />
     </list>
     <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Added packages">
@@ -33,6 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="alberto-Onboarding-Prototype" />
         <entry key="$PROJECT_DIR$" value="main" />
         <entry key="$PROJECT_DIR$" value="dev" />
         <entry key="$PROJECT_DIR$" value="alberto-Welcome" />
@@ -108,6 +111,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "alberto-Admin",
     "git-widget-placeholder": "alberto-Onboarding-Prototype",
     "git-widget-placeholder": "login",
     "ignore.virus.scanning.warn.message": "true",
@@ -149,7 +153,7 @@
       <workItem from="1740453507828" duration="599000" />
       <workItem from="1740565078011" duration="36740000" />
       <workItem from="1741044937246" duration="18000" />
-      <workItem from="1741131400421" duration="6986000" />
+      <workItem from="1741131400421" duration="14031000" />
     </task>
     <task id="LOCAL-00001" summary="Currently, in the process of restructuring some directories in the project to integrate a frontend.">
       <option name="closed" value="true" />
@@ -223,7 +227,39 @@
       <option name="project" value="LOCAL" />
       <updated>1741172559604</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed some of the logic behind the Sign Out feature.">
+      <option name="closed" value="true" />
+      <created>1741173144858</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741173144858</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Made modifications to the sign-in process to distinguish admins. If a user profile is flagged as an admin, it gives the user access to the AdminPage.jsx. This page is where the user will be able to create, update, delete users, as well as view all users.&#10;&#10;This is currently being done through hardcoding, as the database isn't integrated yet. However, the files and logic are there to make it easy to integrate.">
+      <option name="closed" value="true" />
+      <created>1741212902923</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741212902923</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Currently, hardcoding admins and new users for testing purposes.">
+      <option name="closed" value="true" />
+      <created>1741213819283</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741213819283</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changed the styling to the admin button.">
+      <option name="closed" value="true" />
+      <created>1741214238839</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1741214238839</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +296,10 @@
     <MESSAGE value="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future." />
     <MESSAGE value="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory." />
     <MESSAGE value="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from." />
-    <option name="LAST_COMMIT_MESSAGE" value="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from." />
+    <MESSAGE value="Fixed some of the logic behind the Sign Out feature." />
+    <MESSAGE value="Made modifications to the sign-in process to distinguish admins. If a user profile is flagged as an admin, it gives the user access to the AdminPage.jsx. This page is where the user will be able to create, update, delete users, as well as view all users.&#10;&#10;This is currently being done through hardcoding, as the database isn't integrated yet. However, the files and logic are there to make it easy to integrate." />
+    <MESSAGE value="Currently, hardcoding admins and new users for testing purposes." />
+    <MESSAGE value="Changed the styling to the admin button." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the styling to the admin button." />
   </component>
 </project>

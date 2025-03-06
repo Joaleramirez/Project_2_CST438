@@ -13,16 +13,20 @@ public class UserController {
 
     @GetMapping
     public Map<String, Object> getUser(OAuth2AuthenticationToken authentication) {
-        // Get attributes (immutable map)
-        Map<String, Object> attributes = authentication.getPrincipal().getAttributes();
+        // Check if authentication is null (User is logged out)
+        if (authentication == null) {
+            return Map.of("error", "User not authenticated");
+        }
 
-        // Copy to a mutable HashMap
+        // Get attributes safely
+        Map<String, Object> attributes = authentication.getPrincipal().getAttributes();
         Map<String, Object> userAttributes = new HashMap<>(attributes);
 
-        // Add simulated "isNewUser" flag (replace with actual database check later)
-        userAttributes.put("isNewUser", Math.random() > 0.5); // Randomly assigns new/returning status
+        // Simulate new user status (Modify as needed)
+        String email = (String) userAttributes.get("email");
+        boolean isNewUser = email.equals("alberto67497@gmail.com"); // Change this for testing
 
+        userAttributes.put("isNewUser", isNewUser);
         return userAttributes;
     }
 }
-

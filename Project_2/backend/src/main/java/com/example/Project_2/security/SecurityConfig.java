@@ -18,14 +18,16 @@ public class SecurityConfig {
         http
                 .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Enable CORS
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/welcome", "/user").permitAll() // Allow public endpoints
+                        .requestMatchers("/", "/welcome", "/user").permitAll() // Public endpoints
+                        .requestMatchers("/admin/**").hasAuthority("ADMIN") // Only admins can access admin routes
                         .anyRequest().authenticated() // Protect other routes
                 )
                 .logout(logout -> logout
-                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                        .logoutSuccessUrl("http://localhost:3000/") // Redirect to frontend after logout
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout")) // Match logout URL
+                        .logoutSuccessUrl("http://localhost:3000/") // Redirect to frontend Welcome Page
                         .invalidateHttpSession(true) // Clear session
-                        .deleteCookies("JSESSIONID") // Delete authentication cookies
+                        .clearAuthentication(true) // Remove authentication details
+                        .deleteCookies("JSESSIONID") // Ensure logout deletes session cookies
                 )
                 .oauth2Login(oauth2 -> oauth2
                         .defaultSuccessUrl("http://localhost:3000/dashboard", true) // Redirect to dashboard after login
@@ -33,6 +35,7 @@ public class SecurityConfig {
 
         return http.build();
     }
+
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
