@@ -4,6 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory.">
+      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/Project2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/Project2Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/test/java/com/example/Project_2/Project2ApplicationTests.java" beforeDir="false" />
+    </list>
     <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Changed the styling to the admin button.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" afterDir="false" />
@@ -35,6 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
         <entry key="$PROJECT_DIR$" value="alberto-Onboarding-Prototype" />
         <entry key="$PROJECT_DIR$" value="main" />
         <entry key="$PROJECT_DIR$" value="dev" />
@@ -43,6 +59,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alberto93927&quot;
+  }
+}</component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "history": [
     {
@@ -61,6 +83,8 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Joaleramirez/Project_2_CST438.git&quot;,
     &quot;accountId&quot;: &quot;59ab613a-a8a9-4d64-9f1d-57dbc17b8c6d&quot;
+  }
+}</component>
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -106,6 +130,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MongoDBConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QuickStart.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DB&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/joale/IdeaProjects/Project_2_CST438/Project_2/backend/src/main/java/com/example&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;,
+      &quot;mysql&quot;,
+      &quot;mariadb&quot;
+    ]
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -128,15 +180,41 @@
     "project.structure.side.proportion": "0.31494254",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\joale\IdeaProjects\Project_2_CST438\Project_2\backend\src\main\java\com\example" />
+      <recent name="C:\Users\joale\IdeaProjects\Project_2_CST438\Project_2\backend" />
       <recent name="$PROJECT_DIR$/Project_2/backend" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.MongoClientConnectionExample">
+    <configuration name="MongoClientConnectionExample" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MongoClientConnectionExample" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MongoDBConnection" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-23.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="MongoDBConnection" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickStart" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QuickStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
         <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
         <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
@@ -151,6 +229,14 @@
       <option name="presentableId" value="Default" />
       <updated>1740453506639</updated>
       <workItem from="1740453507828" duration="599000" />
+      <workItem from="1740565078011" duration="23255000" />
+      <workItem from="1740700838732" duration="206000" />
+      <workItem from="1740709467782" duration="8101000" />
+      <workItem from="1740950020816" duration="1747000" />
+      <workItem from="1741101692868" duration="6992000" />
+      <workItem from="1741122143639" duration="8413000" />
+      <workItem from="1741153163393" duration="2597000" />
+      <workItem from="1741219670999" duration="3171000" />
       <workItem from="1740565078011" duration="36740000" />
       <workItem from="1741044937246" duration="18000" />
       <workItem from="1741131400421" duration="14031000" />

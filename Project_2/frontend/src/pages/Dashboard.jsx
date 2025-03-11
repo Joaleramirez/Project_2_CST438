@@ -8,7 +8,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:8080/user", { credentials: "include" })
+        fetch("http://localhost:8080/user/auth", { credentials: "include" })
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch user details");
