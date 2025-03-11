@@ -6,17 +6,19 @@ import Dashboard from "./pages/Dashboard";
 import Onboarding from "./pages/Onboarding";
 import Explore from "./pages/Explore";
 
-export default App;
 function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<WelcomePage/>}/>
-                <Route path="/TierList" element={<TierListPage/>}/>
-                <Route path="/dashboard" element={<Dashboard/>}/>
-                <Route path="/onboarding" element={<Onboarding />} />
-                <Route path="/explore" element={<Explore />} />
-            </Routes>
-        </Router>
-    );
-}
+  return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<WelcomePage />} />
+            <Route path="/TierList" element={<TierListPage />} />
+            <Route path="/Login" element={<LoginPage />} />
+            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path="/onboarding" element={<Onboarding />} />
+            <Route path="/explore" element={<Explore />} />
+        </Routes>
+      </Router>
+  );
+};
+
+export default App;
