@@ -1,0 +1,45 @@
+.onboarding-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #4A90E2, #9013FE);
+    color: white;
+    height: 100vh;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.category-btn {
+    background-color: white;
+    color: #4A90E2;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.category-btn.selected {
+    background-color: #9013FE;
+    color: white;
+}
+
+.submit-btn {
+    margin-top: 30px;
+    background-color: white;
+    color: #4A90E2;
+    padding: 12px 24px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #e0e0e0;
+}
