@@ -1,17 +1,21 @@
 import React from "react";
-import TierRow from "./TierRow";
-import "../styles/TierList.css"; // Import TierList styles
+import { useDrag } from "react-dnd";
+import "../styles/TierItem.css"; // Ensure CSS exists
 
-const tiers = ["S", "A", "B", "C", "D", "E", "F"]; // Tier levels
+const TierItem = ({ item }) => {
+    const [{ isDragging }, drag] = useDrag({
+        type: "ITEM",
+        item: { id: item.id },
+        collect: (monitor) => ({
+            isDragging: !!monitor.isDragging(),
+        }),
+    });
 
-const TierList = ({ items, setItems }) => {
     return (
-        <div className="tier-list">
-            {tiers.map((tier) => (
-                <TierRow key={tier} tier={tier} items={items} setItems={setItems} />
-            ))}
+        <div ref={drag} className={`tier-item ${isDragging ? "dragging" : ""}`}>
+            {item.name}
         </div>
     );
 };
 
-export default TierList;
+export default TierItem;

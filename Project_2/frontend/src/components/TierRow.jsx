@@ -1,7 +1,7 @@
 import React from "react";
 import { useDrop } from "react-dnd";
 import TierItem from "./TierItem";
-import "../styles/TierRow.css"; // Import TierRow styles
+import "../styles/TierRow.css"; // Ensure CSS exists
 
 const TierRow = ({ tier, items, setItems }) => {
     const [{ isOver }, drop] = useDrop({
@@ -24,11 +24,9 @@ const TierRow = ({ tier, items, setItems }) => {
         <div ref={drop} className={`tier-row tier-${tier} ${isOver ? "hovered" : ""}`}>
             <div className="tier-label">{tier}</div>
             <div className="tier-content">
-                {items
-                    .filter((item) => item.tier === tier)
-                    .map((item) => (
-                        <TierItem key={item.id} item={item} setItems={setItems} />
-                    ))}
+                {items.map((item) => (
+                    <TierItem key={item.id} item={item} />
+                ))}
             </div>
         </div>
     );
