@@ -1,0 +1,7 @@
+.tier-row {
+    display: flex;
+    background: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}

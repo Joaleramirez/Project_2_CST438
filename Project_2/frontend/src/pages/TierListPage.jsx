@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import TierList from "../components/TierList"; // Import TierList component
 import "../styles/TierListPage.css"; // Import the CSS file
 
 const TierListPage = () => {
+    // Placeholder items
+    const initialItems = [
+        { id: 1, name: "Item 1" },
+        { id: 2, name: "Item 2" },
+        { id: 3, name: "Item 3" },
+        { id: 4, name: "Item 4" },
+    ];
+
+    const [items, setItems] = useState(initialItems);
+
     return (
-        <div className="tierlist-container">
-            <h1 className="tierlist-title">Tier List</h1>
-            <div className="active-tier-section">
-                <h2>Active Tier</h2>
-                <p>This section will display the current active tier. Users will be able to add to or adjust the items in this tier.</p>
+        <DndProvider backend={HTML5Backend}>
+            <div className="tierlist-container">
+                <h1 className="tierlist-title">Tier List</h1>
+                <TierList items={items} setItems={setItems} />
             </div>
-            <div className="past-tiers-section">
-                <h2>Past Tiers</h2>
-                <p>This section will display the past tiers. Each past tier will be listed with its items.</p>
-            </div>
-        </div>
+        </DndProvider>
     );
 };
 
