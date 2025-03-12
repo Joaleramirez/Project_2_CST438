@@ -59,15 +59,6 @@ body, html {
     color: white;
 }
 
-/* Assigning background colors to each tier */
-.tier-row:nth-child(1) .tier-label { background: #E74C3C; } /* S - Red */
-.tier-row:nth-child(2) .tier-label { background: #F4D03F; } /* A - Yellow */
-.tier-row:nth-child(3) .tier-label { background: #F7DC6F; } /* B - Light Yellow */
-.tier-row:nth-child(4) .tier-label { background: #58D68D; } /* C - Green */
-.tier-row:nth-child(5) .tier-label { background: #5DADE2; } /* D - Light Blue */
-.tier-row:nth-child(6) .tier-label { background: #2874A6; } /* E - Blue */
-.tier-row:nth-child(7) .tier-label { background: #8E44AD; } /* F - Purple */
-
 /* Area where items are placed */
 .tier-content {
     flex: 1;

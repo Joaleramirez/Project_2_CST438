@@ -21,13 +21,13 @@ const TierRow = ({ tier, items, setItems }) => {
     };
 
     return (
-        <div ref={drop} className={`tier-row ${isOver ? "hovered" : ""}`}>
+        <div ref={drop} className={`tier-row tier-${tier} ${isOver ? "hovered" : ""}`}>
             <div className="tier-label">{tier}</div>
             <div className="tier-content">
                 {items
                     .filter((item) => item.tier === tier)
                     .map((item) => (
-                        <TierItem key={item.id} item={item} />
+                        <TierItem key={item.id} item={item} setItems={setItems} />
                     ))}
             </div>
         </div>
