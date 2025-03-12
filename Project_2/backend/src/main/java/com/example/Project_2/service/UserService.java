@@ -1,16 +1,17 @@
 package com.example.Project_2.service;
 
 import com.example.Project_2.models.User;
-import com.example.Project_2.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.Project_2.repository.UserRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+
 @Service
 public class UserService {
+    private final UserRepository userRepository;
 
-    @Autowired
-    private UserRepository userRepository;
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
