@@ -8,8 +8,10 @@ import LoginPage from "./pages/LoginPage";
 import Dashboard from "./pages/Dashboard";
 import Onboarding from "./pages/Onboarding";
 import Explore from "./pages/Explore";
+import AccountPage from "./pages/AccountPage"
 
 function App() {
+
     return (
         <DndProvider backend={HTML5Backend}>
             <Router>
@@ -25,5 +27,21 @@ function App() {
         </DndProvider>
     );
 }
+
+  
+      
+        
+          
+            
+            
+            
+            
+            
+            
+        
+      
+  
+
+
 
 export default App;
