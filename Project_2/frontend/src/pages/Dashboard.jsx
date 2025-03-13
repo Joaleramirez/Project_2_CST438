@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import navigation hook
+import { useNavigate, Link } from "react-router-dom"; // Import navigation hook
 import "../styles/Dashboard.css"; // Import CSS file
 
 const Dashboard = () => {
@@ -44,30 +44,40 @@ const Dashboard = () => {
 
 
     return (
-        <div className="dashboard-container">
-            <h1 className="dashboard-title">Welcome to MatchMyTier</h1>
+        <div className="page">
+            <div className="account-container">
+                <Link to="/Account" className="account-button">
+                    <strong>
+                        Account
+                    </strong>
+                </Link>
+            </div>
+            <div className="dashboard-container">
 
-            {error ? (
-                <p className="error-message">Error: {error}</p>
-            ) : user ? (
-                <div className="dashboard-user-info">
-                    <h2>Hello, {user.name}!</h2>
-                    <img src={user.picture} alt="Profile" className="user-profile-pic" />
-                    <p>Email: {user.email}</p>
+                <h1 className="dashboard-title">Welcome to MatchMyTier</h1>
 
-                    {user.role === "ADMIN" && (
-                        <button onClick={() => navigate("/admin")} className="admin-button">
-                            Admin Panel
+                {error ? (
+                    <p className="error-message">Error: {error}</p>
+                ) : user ? (
+                    <div className="dashboard-user-info">
+                        <h2>Hello, {user.name}!</h2>
+                        <img src={user.picture} alt="Profile" className="user-profile-pic" />
+                        <p>Email: {user.email}</p>
+
+                        {user.role === "ADMIN" && (
+                            <button onClick={() => navigate("/admin")} className="admin-button">
+                                Admin Panel
+                            </button>
+                        )}
+
+                        <button onClick={handleLogout} className="dashboard-button">
+                            Logout
                         </button>
-                    )}
-
-                    <button onClick={handleLogout} className="dashboard-button">
-                        Logout
-                    </button>
-                </div>
-            ) : (
-                <p className="loading-message">Loading user details...</p>
-            )}
+                    </div>
+                ) : (
+                    <p className="loading-message">Loading user details...</p>
+                )}
+            </div>
         </div>
     );
 };
