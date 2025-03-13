@@ -1,16 +1,9 @@
 import React from "react";
 import "../styles/WelcomePage.css"; // Import the CSS file
-import { useNavigate } from 'react-router-dom';
 
 const WelcomePage = () => {
     const handleGoogleLogin = () => {
         window.location.href = "http://localhost:8080/oauth2/authorization/google";
-    };
-
-    const navigate = useNavigate();
-
-    const handleClick = () => {
-        navigate('/CreateAccountPage');
     };
 
     return (
@@ -21,9 +14,6 @@ const WelcomePage = () => {
             </p>
             <button onClick={handleGoogleLogin} className="welcome-button">
                 Sign in With Google
-            </button>
-            <button onClick={handleClick} className="welcome-button">
-                Create Account
             </button>
         </div>
     );

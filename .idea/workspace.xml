@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Added packages">
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/CreateAccountPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/styles/CreateAccountPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/pages/WelcomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/WelcomePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/styles/WelcomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/styles/WelcomePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,22 +22,22 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;alberto93927&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "alberto93927"
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Joaleramirez/Project_2_CST438.git",
-    "accountId": "5ddf0550-8138-4a2f-94c5-33b7c7721a0a"
+    "accountId": "59ab613a-a8a9-4d64-9f1d-57dbc17b8c6d"
   }
 }]]></component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -48,7 +45,6 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2tW2S4Sr6Be4y56VB3vVq9nvSkR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#13 on dev",
+    "git-widget-placeholder": "alberto-Welcome",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -76,8 +72,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+        <option value="bundled-jdk-9823dce3aa75-f9f52b72c171-intellij.indexing.shared.core-IU-251.22821.72" />
+        <option value="bundled-js-predefined-d6986cc7102b-7af238ef196b-JavaScript-IU-251.22821.72" />
       </set>
     </attachedChunks>
   </component>
@@ -91,7 +87,6 @@
       <updated>1740453506639</updated>
       <workItem from="1740453507828" duration="599000" />
       <workItem from="1740565078011" duration="6409000" />
-      <workItem from="1741122864254" duration="89000" />
     </task>
     <task id="LOCAL-00001" summary="Currently, in the process of restructuring some directories in the project to integrate a frontend.">
       <option name="closed" value="true" />
