@@ -1,16 +1,18 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import WelcomePage from "./pages/WelcomePage";
 import TierListPage from "./pages/TierListPage";
-import Dashboard from "./pages/Dashboard";
-export default App;
+import CreateAccountPage from "./pages/CreateAccountPage";
+
 function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<WelcomePage/>}/>
-                <Route path="/TierList" element={<TierListPage/>}/>
-                <Route path="/dashboard" element={<Dashboard/>}/>
-            </Routes>
-        </Router>
-    );
+  return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<WelcomePage />} />
+            <Route path="/TierList" element={<TierListPage />} />
+            <Route path="/CreateAccountPage" element={<CreateAccountPage />} />
+        </Routes>
+      </Router>
+  );
 }
+
+export default App;
