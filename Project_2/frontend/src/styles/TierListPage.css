@@ -1,3 +1,4 @@
+/* General styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -8,31 +9,107 @@ body, html {
 .tierlist-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 20px;
     background: linear-gradient(to right, #4A90E2, #9013FE);
     color: white;
     text-align: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .tierlist-title {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.active-tier-section, .past-tiers-section {
     margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+/* Styling for the entire tier list */
+.tier-list {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 15px;
 }
 
-p {
-    font-size: 1.2rem;
+/* Styling for each tier row */
+.tier-row {
+    display: flex;
+    align-items: center;
     margin: 5px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background 0.3s ease-in-out;
+}
+
+.tier-row.hovered {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Left-side tier label (S, A, B, C, etc.) */
+.tier-label {
+    width: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+/* Area where items are placed */
+.tier-content {
+    flex: 1;
+    /*min-height: 60px;*/
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    min-height: 70px;
+}
+
+/* Draggable tier items */
+.tier-item {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: grab;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tier-item:hover {
+    background: #f2f2f2;
+}
+
+.tier-item.dragging {
+    opacity: 0.5;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tierlist-title {
+        font-size: 2.5rem;
+    }
+
+    .tier-list {
+        width: 90%;
+    }
+
+    .tier-label {
+        font-size: 1.3rem;
+        width: 40px;
+    }
+
+    .tier-item {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
 }
