@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom"; // Import navigation hook
+import { useNavigate } from "react-router-dom"; // Import navigation hook
 import "../styles/Dashboard.css"; // Import CSS file
 
 const Dashboard = () => {
