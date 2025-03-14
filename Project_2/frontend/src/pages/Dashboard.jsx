@@ -45,13 +45,6 @@ const Dashboard = () => {
 
     return (
         <div className="page">
-            <div className="account-container">
-                <Link to="/Account" className="account-button">
-                    <strong>
-                        Account
-                    </strong>
-                </Link>
-            </div>
             <div className="dashboard-container">
 
                 <h1 className="dashboard-title">Welcome to MatchMyTier</h1>
