@@ -20,16 +20,60 @@ const NavBar = () => {
             .catch(() => setUser(null)); // Hide NavBar if not logged in
     }, []);
 
+    // const handleLogout = async () => {
+    //     try {
+    //         await fetch("http://localhost:8080/logout", { credentials: "include" });
+    //         setUser(null); // Clear user state
+    //         localStorage.clear(); // Clear any stored data (optional)
+    //         navigate("/"); // Redirect to Welcome Page
+    //     } catch (error) {
+    //         console.error("Logout failed:", error);
+    //     }
+    // };
+    // const handleLogout = async () => {
+    //     try {
+    //         // Use POST to match backend expectation
+    //         await fetch("http://localhost:8080/logout", {
+    //             method: "POST",
+    //             credentials: "include"
+    //         });
+    //
+    //         // Clear local state and stored data
+    //         setUser(null);
+    //         localStorage.clear();
+    //         // sessionStorage.clear();
+    //
+    //         // Redirect to homepage using react-router
+    //         navigate("/");
+    //     } catch (error) {
+    //         console.error("Logout failed:", error);
+    //     }
+    // };
+
     const handleLogout = async () => {
         try {
-            await fetch("http://localhost:8080/logout", { credentials: "include" });
-            setUser(null); // Clear user state
-            localStorage.clear(); // Clear any stored data (optional)
-            navigate("/"); // Redirect to Welcome Page
+            const response = await fetch("http://localhost:8080/logout", {
+                credentials: "include",
+                redirect: "manual" // Don't auto-follow redirects
+            });
+
+            // Clear local state and stored data
+            setUser(null);
+            localStorage.clear();
+            sessionStorage.clear();
+
+            // Get the redirect URL from the response headers
+            const redirectUrl = response.headers.get("Location");
+            if (redirectUrl) {
+                window.location.href = redirectUrl;
+            } else {
+                navigate("/");
+            }
         } catch (error) {
             console.error("Logout failed:", error);
         }
     };
+
 
     if (!user) return null; // Don't show the NavBar if not logged in
 

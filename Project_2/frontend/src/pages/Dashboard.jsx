@@ -31,24 +31,68 @@ const Dashboard = () => {
             });
     }, [navigate]);
 
-    const handleLogout = async () => {
-        try {
-            await fetch("http://localhost:8080/logout", { credentials: "include" });
-            setUser(null); // Clear user state
-            localStorage.clear(); // Clear any stored data (optional)
-            navigate("/"); // Redirect to Welcome Page
-        } catch (error) {
-            console.error("Logout failed:", error);
-        }
-    };
+    // const handleLogout = async () => {
+    //     try {
+    //         await fetch("http://localhost:8080/logout", { credentials: "include" });
+    //         setUser(null); // Clear user state
+    //         localStorage.clear(); // Clear any stored data (optional)
+    //         navigate("/"); // Redirect to Welcome Page
+    //     } catch (error) {
+    //         console.error("Logout failed:", error);
+    //     }
+    // };
+
+    // const handleLogout = async () => {
+    //     try {
+    //         // Use POST to match backend expectation
+    //         await fetch("http://localhost:8080/logout", {
+    //             //method: "POST",
+    //             credentials: "include"
+    //
+    //         });
+    //         // Clear local state and stored data
+    //         setUser(null);
+    //         localStorage.clear();
+    //         // sessionStorage.clear();
+    //
+    //         // Redirect to homepage using react-router
+    //         navigate("/");
+    //
+    //     } catch (error) {
+    //         console.error("Logout failed:", error);
+    //     }
+    // };
+
+    // const handleLogout = async () => {
+    //     try {
+    //         const response = await fetch("http://localhost:8080/logout", {
+    //             credentials: "include",
+    //             redirect: "manual" // Don't auto-follow redirects
+    //         });
+    //
+    //         // Clear local state and stored data
+    //         setUser(null);
+    //         localStorage.clear();
+    //         sessionStorage.clear();
+    //
+    //         // Get the redirect URL from the response headers
+    //         const redirectUrl = response.headers.get("Location");
+    //         if (redirectUrl) {
+    //             window.location.href = redirectUrl;
+    //         } else {
+    //             navigate("/");
+    //         }
+    //     } catch (error) {
+    //         console.error("Logout failed:", error);
+    //     }
+    // };
+
 
 
     return (
         <div className="page">
             <div className="dashboard-container">
-
                 <h1 className="dashboard-title">Welcome to MatchMyTier</h1>
-
                 {error ? (
                     <p className="error-message">Error: {error}</p>
                 ) : user ? (
@@ -56,16 +100,14 @@ const Dashboard = () => {
                         <h2>Hello, {user.name}!</h2>
                         <img src={user.picture} alt="Profile" className="user-profile-pic" />
                         <p>Email: {user.email}</p>
-
                         {user.role === "ADMIN" && (
                             <button onClick={() => navigate("/admin")} className="admin-button">
                                 Admin Panel
                             </button>
                         )}
-
-                        <button onClick={handleLogout} className="dashboard-button">
-                            Logout
-                        </button>
+                        {/*<button onClick={handleLogout} className="dashboard-button">*/}
+                        {/*    Logout*/}
+                        {/*</button>*/}
                     </div>
                 ) : (
                     <p className="loading-message">Loading user details...</p>
