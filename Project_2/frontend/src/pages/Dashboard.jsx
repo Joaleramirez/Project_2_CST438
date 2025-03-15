@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom"; // Import navigation hook
+import { useNavigate } from "react-router-dom"; // Import navigation hook
 import "../styles/Dashboard.css"; // Import CSS file
 
 const Dashboard = () => {
@@ -31,31 +31,10 @@ const Dashboard = () => {
             });
     }, [navigate]);
 
-    const handleLogout = async () => {
-        try {
-            await fetch("http://localhost:8080/logout", { credentials: "include" });
-            setUser(null); // Clear user state
-            localStorage.clear(); // Clear any stored data (optional)
-            navigate("/"); // Redirect to Welcome Page
-        } catch (error) {
-            console.error("Logout failed:", error);
-        }
-    };
-
-
     return (
         <div className="page">
-            <div className="account-container">
-                <Link to="/Account" className="account-button">
-                    <strong>
-                        Account
-                    </strong>
-                </Link>
-            </div>
             <div className="dashboard-container">
-
                 <h1 className="dashboard-title">Welcome to MatchMyTier</h1>
-
                 {error ? (
                     <p className="error-message">Error: {error}</p>
                 ) : user ? (
@@ -63,16 +42,11 @@ const Dashboard = () => {
                         <h2>Hello, {user.name}!</h2>
                         <img src={user.picture} alt="Profile" className="user-profile-pic" />
                         <p>Email: {user.email}</p>
-
                         {user.role === "ADMIN" && (
                             <button onClick={() => navigate("/admin")} className="admin-button">
                                 Admin Panel
                             </button>
                         )}
-
-                        <button onClick={handleLogout} className="dashboard-button">
-                            Logout
-                        </button>
                     </div>
                 ) : (
                     <p className="loading-message">Loading user details...</p>
