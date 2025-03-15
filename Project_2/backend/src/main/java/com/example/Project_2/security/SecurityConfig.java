@@ -19,7 +19,6 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Enable CORS
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/", "/welcome", "/user", "/logout").permitAll() // Public endpoints
-                        //.requestMatchers("/", "/welcome", "/user").permitAll() // Public endpoints
                         .requestMatchers("/admin/**").hasAuthority("ADMIN") // Only admins can access admin routes
                         .anyRequest().authenticated() // Protect other routes
                 )
