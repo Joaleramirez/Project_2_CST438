@@ -1,7 +1,7 @@
 package com.example.Project_2.service;
 
 import com.example.Project_2.models.TierList;
-import com.example.Project_2.repository.TierListRepository;
+import com.example.Project_2.repositories.TierListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -16,7 +16,7 @@ public class TierListService {
         return tierListRepository.findAll();
     }
 
-    public Optional<TierList> getTierListById(Integer id) {
+    public Optional<TierList> getTierListById(Long id) {
         return tierListRepository.findById(id);
     }
 
@@ -24,7 +24,7 @@ public class TierListService {
         return tierListRepository.save(tierList);
     }
 
-    public void deleteTierList(Integer id) {
+    public void deleteTierList(Long id) {
         tierListRepository.deleteById(id);
     }
 }

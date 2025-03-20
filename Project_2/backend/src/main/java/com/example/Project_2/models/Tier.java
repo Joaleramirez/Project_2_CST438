@@ -14,7 +14,7 @@ import java.util.List;
 public class Tier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "tier_list_id", nullable = false)
@@ -26,11 +26,11 @@ public class Tier {
     @Column(nullable = false)
     private Integer tierRank;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -14,7 +14,7 @@ import java.util.List;
 public class TierList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
@@ -29,11 +29,11 @@ public class TierList {
     @Column(nullable = false, updatable = false)
     private java.sql.Timestamp createdAt;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

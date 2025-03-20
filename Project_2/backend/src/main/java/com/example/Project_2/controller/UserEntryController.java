@@ -1,11 +1,18 @@
-package com.example.Project_2.controllers;
+package com.example.Project_2.controller;
 
 import com.example.Project_2.models.UserEntry;
+import com.example.Project_2.models.TierList;
 import com.example.Project_2.service.UserEntryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
@@ -23,15 +30,15 @@ public class UserEntryController {
         return userEntryService.getAllUserEntries();
     }
 
-    // View all tier lists a user has interacted with
+    // View all user entries for a specific user (updated the return type)
     @GetMapping("/{userId}")
-    public ResponseEntity<List<TierList>> getUserEntries(@PathVariable int userId) {
-        return ResponseEntity.ok(userEntryService.getUserEntries(userId));
+    public ResponseEntity<List<UserEntry>> getUserEntries(@PathVariable Long userId) {
+        return ResponseEntity.ok(userEntryService.getUserEntries(userId)); // Make sure this returns List<UserEntry>
     }
 
     // Get a user entry by ID
     @GetMapping("/{id}")
-    public ResponseEntity<UserEntry> getUserEntryById(@PathVariable Integer id) {
+    public ResponseEntity<UserEntry> getUserEntryById(@PathVariable Long id) {
         return userEntryService.getUserEntryById(id).map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
@@ -44,7 +51,7 @@ public class UserEntryController {
 
     // Delete a user entry by ID
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUserEntry(@PathVariable Integer id) {
+    public ResponseEntity<Void> deleteUserEntry(@PathVariable Long id) {
         userEntryService.deleteUserEntry(id);
         return ResponseEntity.noContent().build();
     }

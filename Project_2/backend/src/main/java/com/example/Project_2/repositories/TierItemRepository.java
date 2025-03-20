@@ -1,4 +1,4 @@
-package com.example.Project_2.repository;
+package com.example.Project_2.repositories;
 
 import com.example.Project_2.models.TierItem;
 import org.springframework.data.jpa.repository.JpaRepository;

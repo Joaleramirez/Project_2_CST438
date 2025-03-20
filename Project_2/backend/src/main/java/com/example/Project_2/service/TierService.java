@@ -1,4 +1,4 @@
-package com.example.Project_2.services;
+package com.example.Project_2.service;
 
 import com.example.Project_2.models.Tier;
 import com.example.Project_2.repositories.TierRepository;
@@ -16,7 +16,7 @@ public class TierService {
         return tierRepository.findAll();
     }
 
-    public Optional<Tier> getTierById(Integer id) {
+    public Optional<Tier> getTierById(Long id) {
         return tierRepository.findById(id);
     }
 
@@ -24,7 +24,7 @@ public class TierService {
         return tierRepository.save(tier);
     }
 
-    public void deleteTier(Integer id) {
+    public void deleteTier(Long id) {
         tierRepository.deleteById(id);
     }
 }

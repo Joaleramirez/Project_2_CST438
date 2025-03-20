@@ -1,4 +1,4 @@
-package com.example.Project_2.services;
+package com.example.Project_2.service;
 
 import com.example.Project_2.models.User;
 import com.example.Project_2.repositories.UserRepository;
@@ -17,7 +17,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Optional<User> getUserById(Integer id) {
+    public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
     }
 
@@ -25,7 +25,7 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public void deleteUser(Integer id) {
+    public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
 }
