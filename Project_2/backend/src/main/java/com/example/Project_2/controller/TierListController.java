@@ -11,38 +11,35 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
-
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/tier-lists")
+@RequestMapping("/api/tierlists")
 public class TierListController {
-    @Autowired
-    private TierListService tierListService;
+    private final TierListService tierListService;
 
-    // Get all tier lists
-    @GetMapping
-    public List<TierList> getAllTierLists() {
-        return tierListService.getAllTierLists();
+    public TierListController(TierListService tierListService) {
+        this.tierListService = tierListService;
     }
 
-    // Get a tier list by ID
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<TierList>> getTierListsByUserId(@PathVariable Long userId) {
+        return ResponseEntity.ok(tierListService.getTierListsByUserId(userId));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<TierList> getTierListById(@PathVariable Long id) {
-        return tierListService.getTierListById(id).map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+        return tierListService.getTierListById(id).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Create a new tier list
     @PostMapping
-    public TierList createTierList(@RequestBody TierList tierList) {
-        return tierListService.createTierList(tierList);
+    public ResponseEntity<TierList> createTierList(@RequestBody TierList tierList) {
+        return ResponseEntity.ok(tierListService.createTierList(tierList));
     }
 
-    // Delete a tier list by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTierList(@PathVariable Long id) {
         tierListService.deleteTierList(id);

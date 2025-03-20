@@ -14,33 +14,32 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/tier-items")
+@RequestMapping("/api/tieritems")
 public class TierItemController {
-    @Autowired
-    private TierItemService tierItemService;
+    private final TierItemService tierItemService;
 
-    // Get all tier items
-    @GetMapping
-    public List<TierItem> getAllTierItems() {
-        return tierItemService.getAllTierItems();
+    public TierItemController(TierItemService tierItemService) {
+        this.tierItemService = tierItemService;
     }
 
-    // Get a tier item by ID
+    @GetMapping("/tierlist/{tierListId}")
+    public ResponseEntity<List<TierItem>> getItemsByTierListId(@PathVariable Long tierListId) {
+        return ResponseEntity.ok(tierItemService.getItemsByTierListId(tierListId));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<TierItem> getTierItemById(@PathVariable Long id) {
-        return tierItemService.getTierItemById(id).map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+        return tierItemService.getTierItemById(id).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Create a new tier item
     @PostMapping
-    public TierItem createTierItem(@RequestBody TierItem tierItem) {
-        return tierItemService.createTierItem(tierItem);
+    public ResponseEntity<TierItem> createTierItem(@RequestBody TierItem tierItem) {
+        return ResponseEntity.ok(tierItemService.createTierItem(tierItem));
     }
 
-    // Delete a tier item by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTierItem(@PathVariable Long id) {
         tierItemService.deleteTierItem(id);
