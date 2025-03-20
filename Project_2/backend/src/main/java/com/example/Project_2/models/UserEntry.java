@@ -1,0 +1,61 @@
+package com.example.Project_2.models;
+
+import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
+import java.util.List;
+
+@Entity
+@Table(name = "user_entries")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserEntry {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "tier_list_id", nullable = false)
+    private TierList tierList;
+
+    @Column(nullable = false, updatable = false)
+    private java.sql.Timestamp createdAt;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public TierList getTierList() {
+        return tierList;
+    }
+
+    public void setTierList(TierList tierList) {
+        this.tierList = tierList;
+    }
+
+    public java.sql.Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(java.sql.Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+}

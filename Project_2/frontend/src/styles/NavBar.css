@@ -1,0 +1,115 @@
+/* General NavBar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #4A90E2, #9013FE);
+    padding: 15px 30px;
+    color: white;
+}
+
+/* Logo Styling */
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+/* Logout button styling */
+.logout-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-button:hover {
+    background: darkred;
+}
+/* Logout confirmation popup */
+.logout-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    width: 320px;
+    max-width: 90%;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Logout message */
+.logout-popup p {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Button container */
+.logout-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+/* Yes button (Logout) */
+.logout-button-yes {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-button-yes:hover {
+    background-color: #c0392b;
+}
+
+/* No button (Cancel) */
+.logout-button-no {
+    background-color: #bdc3c7;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-button-no:hover {
+    background-color: #95a5a6;
+}

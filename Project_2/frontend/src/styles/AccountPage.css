@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+}
+
+.account-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4A90E2, #9013FE);
+    color: white;
+    text-align: center;
+}
+
+.main-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    background-color: white;
+    color: #4A90E2;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-label {
+    padding-bottom: 5vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    text-align: left;
+}
+
+.input-text {
+    border-radius: 25px;
+    height: 2em;
+    border: 1px solid #9013FE;
+    padding-left: 1em;
+}
+
+.input-submit {
+    border-radius: 25px;
+    border: 1px solid #9013FE;
+    background-color: white;
+    color: #4A90E2;
+    font-size: 1.2rem;
+    padding: .5em;
+    margin-bottom: 5vh;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.delete-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+}
+
+.delete-button {
+    width: 1.5em;
+    color: white;
+    padding-top: 1em;
+    padding-right: 1em;
+    cursor: pointer;
+}
