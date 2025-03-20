@@ -47,3 +47,4 @@ tasks.named('test') {
 tasks.named('bootRun') {
 	mainClass = 'com.example.Project_2.Project2Application'
 }
+
