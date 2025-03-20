@@ -4,219 +4,76 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory.">
-      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/Project2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/Project2Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/test/java/com/example/Project_2/Project2ApplicationTests.java" beforeDir="false" />
-    </list>
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Changed the styling to the admin button.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/backend/src/main/java/com/example/Project_2/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/Dashboard.jsx" afterDir="false" />
-    </list>
     <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="Added packages">
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/LoginPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_2/frontend/src/styles/LoginPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/pages/WelcomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/pages/WelcomePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_2/frontend/src/styles/WelcomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/src/styles/WelcomePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_2/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project_2/frontend/package.json" afterDir="false" />
     </list>
-    <list default="true" id="56874488-7e0c-477e-aab5-10a78aba306a" name="Changes" comment="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JSX File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
-        <entry key="$PROJECT_DIR$" value="alberto-Onboarding-Prototype" />
         <entry key="$PROJECT_DIR$" value="main" />
-        <entry key="$PROJECT_DIR$" value="dev" />
-        <entry key="$PROJECT_DIR$" value="alberto-Welcome" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;alberto93927&quot;
-  }
-}</component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
-    {
-      "state": "OPEN",
-      "assignee": "alberto93927",
-      "reviewState": "REQUIRED"
-    }
-  ],
   "lastFilter": {
     "state": "OPEN",
-    "assignee": "alberto93927",
-    "reviewState": "REQUIRED"
+    "assignee": "alberto93927"
   }
 }]]></component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Joaleramirez/Project_2_CST438.git&quot;,
-    &quot;accountId&quot;: &quot;59ab613a-a8a9-4d64-9f1d-57dbc17b8c6d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Joaleramirez/Project_2_CST438.git",
+    "accountId": "59ab613a-a8a9-4d64-9f1d-57dbc17b8c6d"
   }
-}</component>
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;Joaleramirez&quot;,
-    &quot;repository&quot;: &quot;Project_2_CST438&quot;
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;alberto93927&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Joaleramirez/Project_2_CST438.git&quot;,
-    &quot;accountId&quot;: &quot;18e9a54b-eae7-4f0e-918b-827d9d507455&quot;
-  }
-}</component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
+}]]></component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2tW2S4Sr6Be4y56VB3vVq9nvSkR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MongoDBConnection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.QuickStart.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;DB&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/joale/IdeaProjects/Project_2_CST438/Project_2/backend/src/main/java/com/example&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;,
-      &quot;mysql&quot;,
-      &quot;mariadb&quot;
-    ]
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "alberto-Admin",
-    "git-widget-placeholder": "alberto-Onboarding-Prototype",
-    "git-widget-placeholder": "login",
-    "ignore.virus.scanning.warn.message": "true",
-    "git-widget-placeholder": "alberto-OAuth",
+    "git-widget-placeholder": "alberto-Welcome",
     "kotlin-language-version-configured": "true",
-    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.31494254",
     "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\joale\IdeaProjects\Project_2_CST438\Project_2\backend\src\main\java\com\example" />
-      <recent name="C:\Users\joale\IdeaProjects\Project_2_CST438\Project_2\backend" />
       <recent name="$PROJECT_DIR$/Project_2/backend" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.MongoClientConnectionExample">
-    <configuration name="MongoClientConnectionExample" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MongoClientConnectionExample" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MongoDBConnection" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-23.0.2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="MongoDBConnection" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuickStart" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QuickStart" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+        <option value="bundled-jdk-9823dce3aa75-f9f52b72c171-intellij.indexing.shared.core-IU-251.22821.72" />
+        <option value="bundled-js-predefined-d6986cc7102b-7af238ef196b-JavaScript-IU-251.22821.72" />
       </set>
     </attachedChunks>
   </component>
@@ -229,17 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740453506639</updated>
       <workItem from="1740453507828" duration="599000" />
-      <workItem from="1740565078011" duration="23255000" />
-      <workItem from="1740700838732" duration="206000" />
-      <workItem from="1740709467782" duration="8101000" />
-      <workItem from="1740950020816" duration="1747000" />
-      <workItem from="1741101692868" duration="6992000" />
-      <workItem from="1741122143639" duration="8413000" />
-      <workItem from="1741153163393" duration="2597000" />
-      <workItem from="1741219670999" duration="3171000" />
-      <workItem from="1740565078011" duration="36740000" />
-      <workItem from="1741044937246" duration="18000" />
-      <workItem from="1741131400421" duration="14031000" />
+      <workItem from="1740565078011" duration="6409000" />
     </task>
     <task id="LOCAL-00001" summary="Currently, in the process of restructuring some directories in the project to integrate a frontend.">
       <option name="closed" value="true" />
@@ -273,79 +120,7 @@
       <option name="project" value="LOCAL" />
       <updated>1740569894215</updated>
     </task>
-    <task id="LOCAL-00005" summary="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future.">
-      <option name="closed" value="true" />
-      <created>1740571745669</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1740571745670</updated>
-    </task>
-    <task id="LOCAL-00006" summary="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory.">
-      <option name="closed" value="true" />
-      <created>1740651097970</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1740651097970</updated>
-    </task>
-    <task id="LOCAL-00007" summary="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory.">
-      <option name="closed" value="true" />
-      <created>1740651112698</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1740651112698</updated>
-    </task>
-    <task id="LOCAL-00008" summary="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory.">
-      <option name="closed" value="true" />
-      <created>1740651326196</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1740651326196</updated>
-    </task>
-    <task id="LOCAL-00009" summary="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from.">
-      <option name="closed" value="true" />
-      <created>1741172559604</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1741172559604</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Fixed some of the logic behind the Sign Out feature.">
-      <option name="closed" value="true" />
-      <created>1741173144858</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1741173144858</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Made modifications to the sign-in process to distinguish admins. If a user profile is flagged as an admin, it gives the user access to the AdminPage.jsx. This page is where the user will be able to create, update, delete users, as well as view all users.&#10;&#10;This is currently being done through hardcoding, as the database isn't integrated yet. However, the files and logic are there to make it easy to integrate.">
-      <option name="closed" value="true" />
-      <created>1741212902923</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1741212902923</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Currently, hardcoding admins and new users for testing purposes.">
-      <option name="closed" value="true" />
-      <created>1741213819283</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1741213819283</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Changed the styling to the admin button.">
-      <option name="closed" value="true" />
-      <created>1741214238839</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1741214238839</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,13 +154,6 @@
     <MESSAGE value="Created React Application for the frontend." />
     <MESSAGE value="I have created the basic WelcomePage." />
     <MESSAGE value="Added packages" />
-    <MESSAGE value="Fixed the SignIn page styling. Initially, I wanted to add Tailwind. However, I was running into some issues. So I went with regular CSS for now. Might change in the future." />
-    <MESSAGE value="I restructured the project again. I threw in all the gradle files and directories into the backend directory. I added CORS setup so the frontend and the backend can interact with each other securely. I integrated OAuth to the Sign In. The way it's currently working, I'm able to pass through data to the Dashboard.jsx file. There are some issues that I'm working on with the logout, and managing a user's session. Those issues will get addressed ASAP. Lastly, I added the concurrently dev dependency to create a script that will allow us to run the backend and the frontend at the sametime, through the same terminal session. This is a better alternative during development, rather than starting the frontend in one terminal window, and the backend in another terminal window. The command to start the application is &quot;npm run start:all&quot; minus the double quotes. Make sure your working directory is the frontend directory, as the terminal commands associated with the script are meant to work from the frontend directory and not the backend directory." />
-    <MESSAGE value="I created the skeleton for the user Onboarding.jsx&#10;At the time of this commit, we don't have a database yet. To simulate new user onboarding, I added random status codes to the users to test the functionality. Additionally, I added Explore.jsx to get an idea of how it would be like to view a list of Tier Lists, which the user can then choose from." />
-    <MESSAGE value="Fixed some of the logic behind the Sign Out feature." />
-    <MESSAGE value="Made modifications to the sign-in process to distinguish admins. If a user profile is flagged as an admin, it gives the user access to the AdminPage.jsx. This page is where the user will be able to create, update, delete users, as well as view all users.&#10;&#10;This is currently being done through hardcoding, as the database isn't integrated yet. However, the files and logic are there to make it easy to integrate." />
-    <MESSAGE value="Currently, hardcoding admins and new users for testing purposes." />
-    <MESSAGE value="Changed the styling to the admin button." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the styling to the admin button." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added packages" />
   </component>
 </project>

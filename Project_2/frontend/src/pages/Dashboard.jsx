@@ -8,7 +8,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:8080/user", { credentials: "include" })
+        fetch("http://localhost:8080/user/auth", { credentials: "include" })
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch user details");
@@ -31,43 +31,27 @@ const Dashboard = () => {
             });
     }, [navigate]);
 
-    const handleLogout = async () => {
-        try {
-            await fetch("http://localhost:8080/logout", { credentials: "include" });
-            setUser(null); // Clear user state
-            localStorage.clear(); // Clear any stored data (optional)
-            navigate("/"); // Redirect to Welcome Page
-        } catch (error) {
-            console.error("Logout failed:", error);
-        }
-    };
-
-
     return (
-        <div className="dashboard-container">
-            <h1 className="dashboard-title">Welcome to MatchMyTier</h1>
-
-            {error ? (
-                <p className="error-message">Error: {error}</p>
-            ) : user ? (
-                <div className="dashboard-user-info">
-                    <h2>Hello, {user.name}!</h2>
-                    <img src={user.picture} alt="Profile" className="user-profile-pic" />
-                    <p>Email: {user.email}</p>
-
-                    {user.role === "ADMIN" && (
-                        <button onClick={() => navigate("/admin")} className="admin-button">
-                            Admin Panel
-                        </button>
-                    )}
-
-                    <button onClick={handleLogout} className="dashboard-button">
-                        Logout
-                    </button>
-                </div>
-            ) : (
-                <p className="loading-message">Loading user details...</p>
-            )}
+        <div className="page">
+            <div className="dashboard-container">
+                <h1 className="dashboard-title">Welcome to MatchMyTier</h1>
+                {error ? (
+                    <p className="error-message">Error: {error}</p>
+                ) : user ? (
+                    <div className="dashboard-user-info">
+                        <h2>Hello, {user.name}!</h2>
+                        <img src={user.picture} alt="Profile" className="user-profile-pic" />
+                        <p>Email: {user.email}</p>
+                        {user.role === "ADMIN" && (
+                            <button onClick={() => navigate("/admin")} className="admin-button">
+                                Admin Panel
+                            </button>
+                        )}
+                    </div>
+                ) : (
+                    <p className="loading-message">Loading user details...</p>
+                )}
+            </div>
         </div>
     );
 };
