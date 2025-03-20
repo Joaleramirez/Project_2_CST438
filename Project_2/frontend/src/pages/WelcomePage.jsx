@@ -10,7 +10,6 @@ const WelcomePage = () => {
     return (
         <div className="page">
             <div className="login-container">
-                {/*make it link to new login page*/}
                 <Link to="/Login" className="login-button">
                     <strong>
                         Log In
