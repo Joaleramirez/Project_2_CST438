@@ -1,6 +1,7 @@
 package com.example.Project_2.controller;
 
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+import org.springframework.web.bind.annotation.*;
 import com.example.Project_2.models.User;
 import com.example.Project_2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,21 +47,9 @@ public class UserController {
     }
 
     // Create a new user
-    @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Integer id) {
-        return userService.getUserById(id).map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
-    @PostMapping
+    @PostMapping("/create")
     public User createUser(@RequestBody User user) {
-        return userService.createUser(user);
-    }
-
-    //Delete User
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable Integer id) {
-        userService.deleteUser(id);
-        return ResponseEntity.noContent().build();
+        System.out.println("new user");
+        return userService.saveUser(user);
     }
 }
