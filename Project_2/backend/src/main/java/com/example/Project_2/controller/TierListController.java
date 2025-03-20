@@ -1,40 +1,44 @@
-package com.example.Project_2.controller;
+package com.example.Project_2.controllers;
 
 import com.example.Project_2.models.TierList;
 import com.example.Project_2.service.TierListService;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
-@RequestMapping("/api/tierlists")
+@RequestMapping("/tier-lists")
 public class TierListController {
-    private final TierListService tierListService;
+    @Autowired
+    private TierListService tierListService;
 
-    public TierListController(TierListService tierListService) {
-        this.tierListService = tierListService;
+    // Get all tier lists
+    @GetMapping
+    public List<TierList> getAllTierLists() {
+        return tierListService.getAllTierLists();
     }
 
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<List<TierList>> getTierListsByUserId(@PathVariable Long userId) {
-        return ResponseEntity.ok(tierListService.getTierListsByUserId(userId));
-    }
-
+    // Get a tier list by ID
     @GetMapping("/{id}")
-    public ResponseEntity<TierList> getTierListById(@PathVariable Long id) {
-        Optional<TierList> tierList = tierListService.getTierListById(id);
-        return tierList.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    public ResponseEntity<TierList> getTierListById(@PathVariable Integer id) {
+        return tierListService.getTierListById(id).map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    // Create a new tier list
     @PostMapping
-    public ResponseEntity<TierList> createTierList(@RequestBody TierList tierList) {
-        return ResponseEntity.ok(tierListService.createTierList(tierList));
+    public TierList createTierList(@RequestBody TierList tierList) {
+        return tierListService.createTierList(tierList);
     }
 
+    // Delete a tier list by ID
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTierList(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteTierList(@PathVariable Integer id) {
         tierListService.deleteTierList(id);
         return ResponseEntity.noContent().build();
     }
