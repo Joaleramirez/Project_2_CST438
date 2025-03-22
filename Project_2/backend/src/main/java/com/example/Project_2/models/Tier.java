@@ -13,20 +13,21 @@ import org.hibernate.type.SqlTypes;
 import java.util.List;
 
 @Entity
-@Table(name = "tier_items")
-public class TierItem {
+@Table(name = "tiers")
+public class Tier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "tier_id", nullable = false)
-    private Tier tier;
+    @JoinColumn(name = "tier_list_id", nullable = false)
+    private TierList tierList;
 
     @Column(nullable = false)
-    private String itemName;
+    private String tierName;
 
-    private String imageUrl;
+    @Column(nullable = false)
+    private Integer tierRank;
 
     public Long getId() {
         return id;
@@ -36,27 +37,27 @@ public class TierItem {
         this.id = id;
     }
 
-    public Tier getTier() {
-        return tier;
+    public TierList getTierList() {
+        return tierList;
     }
 
-    public void setTier(Tier tier) {
-        this.tier = tier;
+    public void setTierList(TierList tierList) {
+        this.tierList = tierList;
     }
 
-    public String getItemName() {
-        return itemName;
+    public String getTierName() {
+        return tierName;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
+    public void setTierName(String tierName) {
+        this.tierName = tierName;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public Integer getTierRank() {
+        return tierRank;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setTierRank(Integer tierRank) {
+        this.tierRank = tierRank;
     }
 }

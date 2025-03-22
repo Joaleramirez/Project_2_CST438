@@ -1,7 +1,8 @@
 package com.example.Project_2.service;
 
 import com.example.Project_2.models.TierItem;
-import com.example.Project_2.repository.TierItemRepository;
+import com.example.Project_2.repositories.TierItemRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +13,10 @@ public class TierItemService {
 
     public TierItemService(TierItemRepository tierItemRepository) {
         this.tierItemRepository = tierItemRepository;
+    }
+
+    public List<TierItem> getAllTierItems() {
+        return tierItemRepository.findAll();
     }
 
     public List<TierItem> getItemsByTierListId(Long tierListId) {
