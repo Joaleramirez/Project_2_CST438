@@ -17,8 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start:all": "concurrently \"cd ../backend && ./gradlew bootRun\" \"npm start\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +39,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "concurrently": "^9.1.2",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.9"
   }

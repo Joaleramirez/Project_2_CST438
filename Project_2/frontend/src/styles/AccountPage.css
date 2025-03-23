@@ -5,7 +5,7 @@ body, html {
     height: 100%;
 }
 
-.login-page {
+.account-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,22 +16,27 @@ body, html {
     text-align: center;
 }
 
-.login-form {
+.main-area {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border-radius: 25px;
-    padding-left: 10vh;
-    padding-right: 10vh;
-    padding-top: 5vh;
-    padding-bottom: 10vh;
     background-color: white;
     color: #4A90E2;
 }
 
+.account-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .input-label {
     padding-bottom: 5vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
     text-align: left;
 }
 
@@ -49,14 +54,24 @@ body, html {
     color: #4A90E2;
     font-size: 1.2rem;
     padding: .5em;
+    margin-bottom: 5vh;
+    width: fit-content;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
-.input-submit:hover {
-    background-color: #e0e0e0;
+.delete-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
 }
 
-.input-submit:active {
-    background-color: lightgray;
+.delete-button {
+    width: 1.5em;
+    color: white;
+    padding-top: 1em;
+    padding-right: 1em;
+    cursor: pointer;
 }
